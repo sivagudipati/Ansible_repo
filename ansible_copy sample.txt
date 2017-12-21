@@ -1,0 +1,6 @@
+hosts: all
+gather_facts: true
+tasks:
+
+	-name: copy file to AWS server
+	 copy: src=C:\swaroop\ruby\input.txt dest=C:\swaroop\ruby\input.txt

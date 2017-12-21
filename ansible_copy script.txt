@@ -1,0 +1,14 @@
+hosts: all
+gather_facts: true
+tasks:
+
+	-name: copy file to AWS server
+	 copy: src=C:\swaroop\ruby\input.txt dest=C:\swaroop\ruby\input.txt
+	 become_user: admin
+	 become_method: pbrun
+
+	copy:
+	src: dvs/abcd.xml
+	dest: /evision/properties/abcd.xml
+	mode: 0755
+	backup: yes
